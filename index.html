@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CAMPUS CONNECT - Modern Campus Management Portal">
+  <title>CAMPUS CONNECT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">C</div>
+        <div><strong>CAMPUS</strong><span>CONNECT</span></div>
+      </div>
+
+      <nav class="nav">
+        <p class="nav-label">MAIN</p>
+        <button class="nav-item active" data-route="home"><span>⌂</span> Home</button>
+        <button class="nav-item" data-route="student"><span>🎓</span> Student Portal</button>
+        <button class="nav-item" data-route="teacher"><span>▣</span> Teacher Portal</button>
+
+        <p class="nav-label">CAMPUS</p>
+        <button class="nav-item" data-route="services"><span>⚙</span> Services</button>
+        <button class="nav-item" data-route="notices"><span>◉</span> Updates / Noticeboard</button>
+        <button class="nav-item" data-route="complaint"><span>⚠</span> Raise Complaint</button>
+        <button class="nav-item" data-route="track"><span>⌁</span> Track Complaint</button>
+        <button class="nav-item" data-route="events"><span>✦</span> Events</button>
+
+        <p class="nav-label">HELP</p>
+        <button class="nav-item" data-route="contact"><span>✉</span> Contact</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar" id="sideAvatar">G</div>
+          <div>
+            <strong id="sideName">Guest User</strong>
+            <small id="sideRole">Not signed in</small>
+          </div>
+        </div>
+        <button class="logout-btn hidden" id="logoutBtn">Sign out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">
+          <span>CAMPUS CONNECT</span><b>/</b><strong id="pageTitle">Home</strong>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="glowToggle" title="Toggle glow mode">✺</button>
+          <button class="icon-btn" id="profileBtn" title="Profile">●</button>
+          <div class="profile-menu hidden" id="profileMenu">
+            <strong id="menuProfileName">Guest User</strong>
+            <span id="menuProfileRole">Not signed in</span>
+            <button data-route="student">Open Student Portal</button>
+            <button data-route="teacher">Open Teacher Portal</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="content" id="app"></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop">
+    <div class="modal" id="modal"></div>
+  </div>
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
